@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Direction</title>
+  <link rel="stylesheet"
+  href="styles.css">
+  <style>
+   
+body{
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  min-height:100vh;
+  
+  font-family: "Times New Roman ";
+}
+ :root{
+  --THICKCOLOR:#055d5d;
+  --LIGHTCOLOR:#0aa19e;
+   --PADDING:15px;
+}
+.container{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  max-height: 600px;
+  border-radius: 7px;
+}
+h2{
+  color: var(--THICKCOLOR);
+  padding-bottom: var(--PADDING);
+  font-size: 2rem;
+}
+h3{
+  color:#cfd951;
+}
+h2, h3, span, .why-us{
+  font-weight: bolder;
+}
+span{
+  font-size: 2rem;
+}
+article.first.box{
+  padding: var(--PADDING);
+  background: aliceblue;
+  border-radius: 10px 10px 0 0;
+}
+article.second.box{
+  background-color: var(--THICKCOLOR);
+  color: whitesmoke;
+  padding: var(--PADDING);
+  max-width:calc('100vw - 50%');
+  flex-basis: 500px;
+  max-height:500px;
+}
+button{
+  padding: var(--PADDING);
+   background-color:#cfd951;
+   border-radius: 7px;
+   width: 50%;
+   font-size: 1.1em;
+   border: none;
+   text-align: center;
+   margin: 20px  20%;
+}
+a:any-link{
+  color:brown;
+  font-family: Sans-Serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+article.third.box{
+  background-color: var(--LIGHTCOLOR);
+  color: whitesmoke;
+  padding: var(--PADDING);
+  flex-basis: 500px;
+  max-height:500px;
+}
+ul {
+  list-style: none;
+  line-height: 2rem;
+}
+@media (min-width: 680px){
+  .container{
+    flex-direction: row;
+    flex-basis: 400px;
+  }
+}
+  </style>
+  
+</head>
+
+<body>
+  <article class="first box">
+    <h2>Join our community</h2>
+    <h3>30-days hussle money back</h3>
+    <p>Gain access to our free library tutorials. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </article>
+  <div class="container">
+  <article class="second box">
+    <h3>Monthly subscription</h3>
+    <p><span>$29</span> subscription per month</p>
+    <p>Full access for less than one week.</p>
+    <button type="submit"><a href="/">  SIGN UP</a></button>
+  </article>
+  <article class="third box">
+    <p class="why-us">why us </p>
+    <ul>
+      <li>Tutorial by industrial aspect </li>
+   <li> Peer and expert code review </li>
+   <li>Access to our Github repos </li>
+   <li>Community forum</li>
+   <li>Flashcard decks</li>
+   <li>New video every week</li>
+    </ul>
+    </p>
+  </article>
+  </div>
+</body>
+
+</html>
